@@ -258,7 +258,7 @@ export default function Component1() {
 
   return (
     <div id="component1">
-      <p style={{color:"red",font:"1.5vw"}}>{studentfirstname}</p>
+      {/* <p style={{color:"red",font:"1.5vw"}}>{studentfirstname}</p>
       <p style={{color:"red",font:"1.5vw"}}>{studentlastname}</p>
       <p style={{color:"red",font:"1.5vw"}}>{studentdob}</p>
       <p style={{color:"red",font:"1.5vw"}}>{studentsibling}</p>
@@ -276,7 +276,7 @@ export default function Component1() {
       <p style={{color:"red",font:"1.5vw"}}>{motherqualification}</p>
       <p style={{color:"red",font:"1.5vw"}}>{address}</p>
       <p style={{color:"red",font:"1.5vw"}}>{radiomessage1}</p>
-      <p style={{color:"green",font:"2.5vw"}}>{flagmessage}</p>
+      <p style={{color:"green",font:"2.5vw"}}>{flagmessage}</p> */}
 
 
 
@@ -286,35 +286,35 @@ export default function Component1() {
           <form onSubmit={save}>
             <h2 id="h2">Student Registration Form</h2>
             <p className="p1">Name of the Applicant </p>
-            <p><input type="text" className="box1" id="fname" placeholder='first'/>&nbsp;&nbsp;<input type="text" className="box1" id="lname" placeholder='last'/></p>
+            <p><input type="text" className="box1" id="fname" placeholder='first'/>&nbsp;&nbsp;<input type="text" className="box1" id="lname" placeholder='last'/><span style={{color:"red"}}>{studentfirstname}</span><span style={{color:"red"}}>{studentlastname}</span></p>
             <p className="p1">Date of Birth</p>
-            <p><input type="date" className="box2" id="date" placeholder='MM/DD/YYYY'/></p>
-            <p>Gender<br/><input type="radio" value="male" name="gender" onClick={radiofun}/>Male<br/><input type="radio" value="female" name="gender" onClick={radiofun}/>Female<br/></p>
+            <p><input type="date" className="box2" id="date" placeholder='MM/DD/YYYY'/><span style={{color:"red"}}>{studentdob}</span></p>
+            <p>Gender<br/><input type="radio" value="male" name="gender" onClick={radiofun}/>Male<br/><input type="radio" value="female" name="gender" onClick={radiofun}/>Female<br/><span style={{color:"red"}}>{radiomessage1}</span></p>
             <p className="p1">Details of Siblings</p>
-            <p><textarea cols={70} rows={5} id="idsibling"></textarea></p>
+            <p><textarea cols={70} rows={5} id="idsibling"></textarea><span style={{color:"red"}}>{studentsibling}</span></p>
             <p className="p2">Parent's Information</p>
             <p className="p1">Father's Name</p>
-            <p><input type="text" className="box1" id="ffname" placeholder='first'/>&nbsp;&nbsp;<input type="text" className="box1" id="flname" placeholder='last'/></p>
+            <p><input type="text" className="box1" id="ffname" placeholder='first'/>&nbsp;&nbsp;<input type="text" className="box1" id="flname" placeholder='last'/><span style={{color:"red"}}>{fatherfirstname}</span><span style={{color:"red"}}>{fatherlastname}</span></p>
             <p className="p1">Father's Qualification</p>
-            <p><input type="text" className="box2" id="fqualification"/></p>
+            <p><input type="text" className="box2" id="fqualification"/><span style={{color:"red"}}>{fatherqualification}</span></p>
             <div id="phoneandemail">
             <div className="p1">Phone<br/><input type="number" className="box3" id="fphone"/></div>
-            <div className="p1">Email<br/><input type="email" className="box3" id="femail"/></div>
+            <div className="p1">Email<br/><input type="email" className="box3" id="femail"/></div><span style={{color:"red"}}>{fatherphone}</span><span style={{color:"red"}}>{fatheremail}</span>
             </div>
             <p className="p1">Father's Occupation</p>
-            <p><input type="text" className="box2" id="foccupation"/></p>
+            <p><input type="text" className="box2" id="foccupation"/><span style={{color:"red"}}>{fatheroccupation}</span></p>
             <p className="p1">Mother's Name</p>
-            <p><input type="text" className="box1" id="mfname" placeholder='first'/>&nbsp;&nbsp;<input type="text" className="box1" id="mlname" placeholder='last'/></p>
+            <p><input type="text" className="box1" id="mfname" placeholder='first'/>&nbsp;&nbsp;<input type="text" className="box1" id="mlname" placeholder='last'/><span style={{color:"red"}}>{motherfirstname}</span><span style={{color:"red"}}>{motherlastname}</span></p>
             <p className="p1">Mother's Qualification</p>
-            <p><input type="text" className="box2" id="mqualification"/></p>
+            <p><input type="text" className="box2" id="mqualification"/><span style={{color:"red"}}>{motherqualification}</span></p>
             <div id="phoneandemail">
             <div className="p1">Phone<br/><input type="number" className="box3" id="mphone"/></div>
-            <div className="p1">Email<br/><input type="email" className="box3" id="memail"/></div>
+            <div className="p1">Email<br/><input type="email" className="box3" id="memail"/></div><span style={{color:"red"}}>{motherphone}</span><span style={{color:"red"}}>{motheremail}</span>
             </div>
             <p className="p1">Mother's Occupation</p>
-            <p><input type="text" className="box2" id="moccupation"/></p>
+            <p><input type="text" className="box2" id="moccupation"/><span style={{color:"red"}}>{motheroccupation}</span></p>
             <p className="p1">Address</p>
-            <p><input type="text" className="box2" id="address"/></p>
+            <p><input type="text" className="box2" id="address"/><span style={{color:"red"}}>{address}</span></p>
             <p className="btn"><input type="submit" value="Register" id="btn1"/><input type="button" value="Reset" id="btn2" onClick={reset}/></p>
           </form>
 
